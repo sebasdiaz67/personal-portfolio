@@ -941,8 +941,9 @@ body {
 
 .footer-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .footer-social {
@@ -1107,6 +1108,8 @@ body {
     flex-direction: column;
     gap: 1rem;
     text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .skill-category {
