@@ -1,1201 +1,797 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>vCard - Personal Portfolio</title>
-
-  <!--
-    - favicon
-  -->
-  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
-
-  <!--
-    - custom css link
-  -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!--
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Byron Sebastián Rosero Díaz - Java Full Stack Developer</title>
+    <meta name="description" content="Portafolio profesional de Byron Sebastián Rosero Díaz, Java Full Stack Developer con +5 años de experiencia en Spring Boot, Angular y arquitectura de microservicios.">
+    <meta name="keywords" content="Java, Spring Boot, Angular, Full Stack, Developer, Portfolio, Microservicios, API REST">
+    <meta name="author" content="Byron Sebastián Rosero Díaz">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Byron Sebastián Rosero Díaz - Java Full Stack Developer">
+    <meta property="og:description" content="Desarrollador Full Stack especializado en Java y Angular con experiencia en sistemas empresariales">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
-
-  <!--
-    - #MAIN
-  -->
-
-  <main>
-
-    <!--
-      - #SIDEBAR
-    -->
-
-    <aside class="sidebar" data-sidebar>
-
-      <div class="sidebar-info">
-
-        <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.png" alt="Richard hanrick" width="80">
-        </figure>
-
-        <div class="info-content">
-          <h1 class="name" title="Richard hanrick">Richard hanrick</h1>
-
-          <p class="title">Web developer</p>
-        </div>
-
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-
-      </div>
-
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">BR</span>
             </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="mailto:richard@example.com" class="contact-link">richard@example.com</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
-
-              <a href="tel:+12133522795" class="contact-link">+1 (213) 352-2795</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Birthday</p>
-
-              <time datetime="1982-06-23">June 23, 1982</time>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-
-              <address>Sacramento, California, USA</address>
-            </div>
-
-          </li>
-
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
-
-    </aside>
-
-
-
-
-
-    <!--
-      - #main-content
-    -->
-
-    <div class="main-content">
-
-      <!--
-        - #NAVBAR
-      -->
-
-      <nav class="navbar">
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Blog</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
-          </li>
-
-        </ul>
-
-      </nav>
-
-
-
-
-
-      <!--
-        - #ABOUT
-      -->
-
-      <article class="about  active" data-page="about">
-
-        <header>
-          <h2 class="h2 article-title">About me</h2>
-        </header>
-
-        <section class="about-text">
-          <p>
-            I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print media.
-            I enjoy
-            turning complex problems into simple, beautiful and intuitive designs.
-          </p>
-
-          <p>
-            My job is to build your website so that it is functional and user-friendly but at the same time attractive.
-            Moreover, I
-            add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring
-            across your
-            message and identity in the most creative way. I created web design for many famous brand companies.
-          </p>
-        </section>
-
-
-        <!--
-          - service
-        -->
-
-        <section class="service">
-
-          <h3 class="h3 service-title">What i'm doing</h3>
-
-          <ul class="service-list">
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg
-                " alt="design icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web design</h4>
-
-                <p class="service-item-text">
-                  The most modern and high-quality design made at a professional level.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web development</h4>
-
-                <p class="service-item-text">
-                  High-quality development of sites at the professional level.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Mobile apps</h4>
-
-                <p class="service-item-text">
-                  Professional development of applications for iOS and Android.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Photography</h4>
-
-                <p class="service-item-text">
-                  I make high-quality photos of any category at a professional level.
-                </p>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-
-
-        <!--
-          - testimonials
-        -->
-
-        <section class="testimonials">
-
-          <h3 class="h3 testimonials-title">Testimonials</h3>
-
-          <ul class="testimonials-list has-scrollbar">
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Daniel lewis</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Jessica miller</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Emily evans</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Henry william</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
-        </section>
-
-
-        <!--
-          - testimonials modal
-        -->
-
-        <div class="modal-container" data-modal-container>
-
-          <div class="overlay" data-overlay></div>
-
-          <section class="testimonials-modal">
-
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-
-            <div class="modal-img-wrapper">
-              <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
-              </figure>
-
-              <img src="./assets/images/icon-quote.svg" alt="quote icon">
-            </div>
-
-            <div class="modal-content">
-
-              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
-
-              <time datetime="2021-06-14">14 June, 2021</time>
-
-              <div data-modal-text>
-                <p>
-                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                  lot of experience
-                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                  consectetur adipiscing
-                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                </p>
-              </div>
-
-            </div>
-
-          </section>
-
-        </div>
-
-
-        <!--
-          - clients
-        -->
-
-        <section class="clients">
-
-          <h3 class="h3 clients-title">Clients</h3>
-
-          <ul class="clients-list has-scrollbar">
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-1-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-2-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-3-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-4-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-5-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-6-color.png" alt="client logo">
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #RESUME
-      -->
-
-      <article class="resume" data-page="resume">
-
-        <header>
-          <h2 class="h2 article-title">Resume</h2>
-        </header>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Education</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">University school of the arts</h4>
-
-              <span>2007 — 2008</span>
-
-              <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">New york academy of art</h4>
-
-              <span>2006 — 2007</span>
-
-              <p class="timeline-text">
-                Ratione voluptatem sequi nesciunt, facere quisquams facere menda ossimus, omnis voluptas assumenda est
-                omnis..
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">High school of art and design</h4>
-
-              <span>2002 — 2004</span>
-
-              <p class="timeline-text">
-                Duis aute irure dolor in reprehenderit in voluptate, quila voluptas mag odit aut fugit, sed consequuntur
-                magni dolores
-                eos.
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Experience</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Creative director</h4>
-
-              <span>2015 — Present</span>
-
-              <p class="timeline-text">
-                Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et qvuas
-                molestias
-                exceptur.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Art director</h4>
-
-              <span>2013 — 2015</span>
-
-              <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Web designer</h4>
-
-              <span>2010 — 2013</span>
-
-              <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="skill">
-
-          <h3 class="h3 skills-title">My skills</h3>
-
-          <ul class="skills-list content-card">
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Web design</h5>
-                <data value="80">80%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Graphic design</h5>
-                <data value="70">70%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Branding</h5>
-                <data value="90">90%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">WordPress</h5>
-                <data value="50">50%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 50%;"></div>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #PORTFOLIO
-      -->
-
-      <article class="portfolio" data-page="portfolio">
-
-        <header>
-          <h2 class="h2 article-title">Portfolio</h2>
-        </header>
-
-        <section class="projects">
-
-          <ul class="filter-list">
-
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web design</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Applications</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web development</button>
-            </li>
-
-          </ul>
-
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web design</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Applications</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web development</button>
-              </li>
-
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">Sobre Mí</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Habilidades</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#experience" class="nav-link">Experiencia</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#content" class="nav-link">Contenido</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#certifications" class="nav-link">Certificaciones</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contacto</a>
+                </li>
             </ul>
-
-          </div>
-
-          <ul class="project-list">
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Finance</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Orizon</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Fundo</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Brawlhalla</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
-                </figure>
-
-                <h3 class="project-title">DSM.</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">MetaSpark</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Summary</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Task Manager</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Arrival</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #BLOG
-      -->
-
-      <article class="blog" data-page="blog">
-
-        <header>
-          <h2 class="h2 article-title">Blog</h2>
-        </header>
-
-        <section class="blog-posts">
-
-          <ul class="blog-posts-list">
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
-
-                  <p class="blog-text">
-                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Best fonts every designer</h3>
-
-                  <p class="blog-text">
-                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #80</h3>
-
-                  <p class="blog-text">
-                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">UI interactions of the week</h3>
-
-                  <p class="blog-text">
-                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
-
-                  <p class="blog-text">
-                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #79</h3>
-
-                  <p class="blog-text">
-                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #CONTACT
-      -->
-
-      <article class="contact" data-page="contact">
-
-        <header>
-          <h2 class="h2 article-title">Contact</h2>
-        </header>
-
-        <section class="mapbox" data-mapbox>
-          <figure>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
-              width="400" height="300" loading="lazy"></iframe>
-          </figure>
-        </section>
-
-        <section class="contact-form">
-
-          <h3 class="h3 form-title">Contact Form</h3>
-
-          <form action="#" class="form" data-form>
-
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
+        </div>
+    </nav>
 
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="hero-name">Byron Sebastián</span>
+                    <span class="hero-surname">Rosero Díaz</span>
+                </h1>
+                <h2 class="hero-subtitle">Java Full Stack Developer</h2>
+                <p class="hero-description">
+                    Construyendo soluciones empresariales escalables con Java y Angular
+                </p>
+                <p class="hero-linkedin">
+                    <i class="fab fa-linkedin"></i>
+                    Comparto tips y experiencias sobre desarrollo de software en LinkedIn
+                </p>
+                <div class="hero-buttons">
+                    <a href="https://www.linkedin.com/in/sebasdiaz67" target="_blank" class="btn btn-secondary">
+                        <i class="fab fa-linkedin"></i>
+                        Ver LinkedIn
+                    </a>
+                    <a href="./assets/CV-Sebastian-Rosero.pdf" class="btn btn-outline" id="download-cv" download>
+                        <i class="fas fa-download"></i>
+                        Descargar CV
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-avatar">
+                    <img src="./assets/profile-picture.jpg" alt="Byron Sebastián Rosero Díaz" class="profile-img">
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
 
-            <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">Sobre Mí</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro">
+                        Soy un desarrollador Full Stack con más de 5 años de experiencia especializado en 
+                        construir soluciones empresariales robustas y escalables. Mi enfoque se centra en 
+                        la arquitectura de software, el desarrollo de microservicios y la creación de 
+                        aplicaciones modernas con Java y Angular.
+                    </p>
+                    <p>
+                        A lo largo de mi carrera, he liderado migraciones de sistemas legacy a tecnologías 
+                        modernas, implementado arquitecturas de microservicios y desarrollado formularios 
+                        dinámicos complejos basados en base de datos. Mi experiencia abarca desde el diseño 
+                        de APIs REST hasta la implementación de soluciones de seguridad empresarial.
+                    </p>
+                    <p>
+                        Me apasiona compartir conocimiento y experiencias reales a través de LinkedIn, donde 
+                        publico regularmente tips de programación, buenas prácticas y lecciones aprendidas 
+                        en proyectos empresariales. Creo firmemente en el desarrollo de soluciones prácticas 
+                        y en la importancia de mantenerse actualizado con las últimas tecnologías.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-server"></i>
+                            <span>Arquitectura Backend</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-code"></i>
+                            <span>Desarrollo Frontend</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-project-diagram"></i>
+                            <span>Microservicios</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Seguridad</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-          </form>
+    <!-- Skills Section -->
+    <section id="skills" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Habilidades Técnicas</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="skill-category-title">
+                        <i class="fas fa-server"></i>
+                        Backend
+                    </h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Java</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Spring Boot</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">REST APIs</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="92"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Microservicios</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-        </section>
+                <div class="skill-category">
+                    <h3 class="skill-category-title">
+                        <i class="fas fa-laptop-code"></i>
+                        Frontend
+                    </h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Angular (v1-v16)</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">HTML5/CSS3</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">TypeScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-      </article>
+                <div class="skill-category">
+                    <h3 class="skill-category-title">
+                        <i class="fas fa-database"></i>
+                        Base de Datos
+                    </h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">PostgreSQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Oracle</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">DB2</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="75"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-    </div>
+                <div class="skill-category">
+                    <h3 class="skill-category-title">
+                        <i class="fas fa-cogs"></i>
+                        DevOps & Otros
+                    </h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Docker</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Kubernetes</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Apache NiFi</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">JUnit/Mockito</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  </main>
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title">Experiencia Profesional</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Consultor Técnico</h3>
+                            <span class="timeline-company">Kruger / Zurich</span>
+                            <span class="timeline-period">2020 - Presente</span>
+                        </div>
+                        <ul class="timeline-description">
+                            <li>Desarrollo de APIs REST con Spring Boot para sistemas empresariales</li>
+                            <li>Liderazgo en migración de sistemas legacy a arquitectura moderna</li>
+                            <li>Implementación de formularios dinámicos basados en configuración de base de datos</li>
+                            <li>Desarrollo de micro frontends utilizando Angular</li>
+                            <li>Integración de sistemas de seguridad (Keycloak → OKTA)</li>
+                            <li>Automatización de procesos con Apache NiFi</li>
+                            <li>Diseño y arquitectura de microservicios escalables</li>
+                        </ul>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">Angular</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Apache NiFi</span>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Desarrollador Full Stack</h3>
+                            <span class="timeline-company">Asinfo</span>
+                            <span class="timeline-period">2018 - 2020</span>
+                        </div>
+                        <ul class="timeline-description">
+                            <li>Desarrollo de aplicaciones web con Java EE y AngularJS</li>
+                            <li>Mantenimiento y evolución de sistemas empresariales</li>
+                            <li>Integración con bases de datos Oracle y PostgreSQL</li>
+                            <li>Implementación de servicios REST para consumo frontend</li>
+                        </ul>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">Java EE</span>
+                            <span class="tech-tag">AngularJS</span>
+                            <span class="tech-tag">Oracle</span>
+                            <span class="tech-tag">REST</span>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Desarrollador Junior</h3>
+                            <span class="timeline-company">FarmaEnlace</span>
+                            <span class="timeline-period">2017 - 2018</span>
+                        </div>
+                        <ul class="timeline-description">
+                            <li>Desarrollo de módulos para sistema de gestión farmacéutica</li>
+                            <li>Creación de reportes y consultas SQL complejas</li>
+                            <li>Soporte técnico y mantenimiento de aplicaciones existentes</li>
+                        </ul>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">HTML/CSS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    
+    <!-- Content Section -->
+    <section id="content" class="section">
+        <div class="container">
+            <h2 class="section-title">Contenido & Comunidad</h2>
+            <div class="content-section">
+                <div class="content-intro">
+                    <div class="content-text">
+                        <h3>Compartiendo Conocimiento en LinkedIn</h3>
+                        <p>
+                            Me apasiona compartir experiencias reales, buenas prácticas y tips sobre 
+                            desarrollo de software. A través de mi perfil en LinkedIn, publico regularmente 
+                            contenido técnico basado en mi experiencia trabajando en proyectos empresariales.
+                        </p>
+                        <a href="https://linkedin.com/in/sebasdiaz67" target="_blank" class="btn btn-primary">
+                            <i class="fab fa-linkedin"></i>
+                            Seguir en LinkedIn
+                        </a>
+                    </div>
+                    <div class="content-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Serie Tips</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">357</span>
+                            <span class="stat-label">Seguidores</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Años Experiencia</span>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="content-posts">
+                    <h3>Publicaciones Recientes</h3>
+                    <div class="posts-grid">
+                        <article class="post-card">
+                            <div class="post-header">
+                                <i class="fab fa-linkedin post-icon"></i>
+                                <span class="post-date">Micro Lecciones · Parte 1/10</span>
+                            </div>
+                            <h4 class="post-title">Trazabilidad distribuida: saber qué pasó y dónde 🔍</h4>
+                            <p class="post-excerpt">
+                                El sistema falló a las 2 AM. Teníamos 8 microservicios en producción. 
+                                Sin trazabilidad, depurar microservicios es buscar una aguja en 8 pajares distintos. 
+                                Con Spring Cloud Sleuth + Zipkin: un solo traceId para seguir el hilo completo...
+                            </p>
+                            <div class="post-tags">
+                                <span class="post-tag">#Microservicios</span>
+                                <span class="post-tag">#SpringBoot</span>
+                                <span class="post-tag">#Java</span>
+                            </div>
+                            <a href="https://linkedin.com/in/sebasdiaz67" target="_blank" class="post-link">Leer en LinkedIn →</a>
+                        </article>
 
+                        <article class="post-card">
+                            <div class="post-header">
+                                <i class="fab fa-linkedin post-icon"></i>
+                                <span class="post-date">Serie Clean Code · Parte 10/10</span>
+                            </div>
+                            <h4 class="post-title">docker-compose como documentación viva 🐳</h4>
+                            <p class="post-excerpt">
+                                Llegué a un proyecto nuevo y lo primero que hice fue abrir el docker-compose.yml. 
+                                En 3 minutos supe qué servicios tenía el sistema, cómo se comunicaban, 
+                                qué dependía de qué y qué variables de entorno necesitaba...
+                            </p>
+                            <div class="post-tags">
+                                <span class="post-tag">#CleanCode</span>
+                                <span class="post-tag">#Docker</span>
+                                <span class="post-tag">#DevOps</span>
+                            </div>
+                            <a href="https://linkedin.com/in/sebasdiaz67" target="_blank" class="post-link">Leer en LinkedIn →</a>
+                        </article>
 
-  <!--
-    - custom js link
-  -->
-  <script src="./assets/js/script.js"></script>
+                        <article class="post-card">
+                            <div class="post-header">
+                                <i class="fab fa-linkedin post-icon"></i>
+                                <span class="post-date">Reflexión Profesional</span>
+                            </div>
+                            <h4 class="post-title">La experiencia de campo no aparece en ningún diploma</h4>
+                            <p class="post-excerpt">
+                                He sido ingeniero de software por varios años. He resuelto bugs a las 2 AM. 
+                                He entregado proyectos con fechas imposibles. He aprendido más en una crisis 
+                                de producción que en muchas aulas...
+                            </p>
+                            <div class="post-tags">
+                                <span class="post-tag">#Liderazgo</span>
+                                <span class="post-tag">#Profesionalismo</span>
+                                <span class="post-tag">#SoftwareEngineering</span>
+                            </div>
+                            <a href="https://linkedin.com/in/sebasdiaz67" target="_blank" class="post-link">Leer en LinkedIn →</a>
+                        </article>
 
-  <!--
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+                        <article class="post-card">
+                            <div class="post-header">
+                                <i class="fab fa-linkedin post-icon"></i>
+                                <span class="post-date">Serie Clean Code · Parte 9/10</span>
+                            </div>
+                            <h4 class="post-title">Pipes y directivas: abstracción en el template 🔧</h4>
+                            <p class="post-excerpt">
+                                Encontré esta lógica repetida en 7 templates distintos del mismo proyecto. 
+                                Misma transformación, 7 copias, 7 lugares donde podía fallar. 
+                                Una línea en el template. Cero lógica. Cero duplicación...
+                            </p>
+                            <div class="post-tags">
+                                <span class="post-tag">#CleanCode</span>
+                                <span class="post-tag">#Angular</span>
+                                <span class="post-tag">#Frontend</span>
+                            </div>
+                            <a href="https://linkedin.com/in/sebasdiaz67" target="_blank" class="post-link">Leer en LinkedIn →</a>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Certifications Section -->
+    <section id="certifications" class="section">
+        <div class="container">
+            <h2 class="section-title">Certificaciones</h2>
+            <div class="certifications-grid">
+                <div class="certification-card">
+                    <div class="certification-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <div class="certification-content">
+                        <h3 class="certification-title">B1 Nivel Elemental</h3>
+                        <p class="certification-issuer">Fundación Social Perea</p>
+                        <p class="certification-date">Abril 2026</p>
+                        <div class="certification-skills">
+                            <span class="skill-badge">Inglés</span>
+                            <span class="skill-badge">B1</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certification-card">
+                    <div class="certification-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <div class="certification-content">
+                        <h3 class="certification-title">A2 Nivel Elemental</h3>
+                        <p class="certification-issuer">Fundación Social Perea</p>
+                        <p class="certification-date">Diciembre 2025</p>
+                        <div class="certification-skills">
+                            <span class="skill-badge">Inglés</span>
+                            <span class="skill-badge">A2</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certification-card">
+                    <div class="certification-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="certification-content">
+                        <h3 class="certification-title">Expositor AI for Education</h3>
+                        <p class="certification-issuer">Escuela Politécnica Nacional</p>
+                        <p class="certification-date">Noviembre 2025</p>
+                        <div class="certification-skills">
+                            <span class="skill-badge">AI</span>
+                            <span class="skill-badge">Educación</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certification-card">
+                    <div class="certification-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="certification-content">
+                        <h3 class="certification-title">Curso de iniciación al desarrollo con IA</h3>
+                        <p class="certification-issuer">BIG School</p>
+                        <p class="certification-date">Octubre 2025</p>
+                        <div class="certification-skills">
+                            <span class="skill-badge">IA</span>
+                            <span class="skill-badge">Desarrollo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certification-card">
+                    <div class="certification-icon">
+                        <i class="fab fa-docker"></i>
+                    </div>
+                    <div class="certification-content">
+                        <h3 class="certification-title">Guía Completa de Docker & Kubernetes con Spring Boot 2023</h3>
+                        <p class="certification-issuer">Udemy</p>
+                        <p class="certification-date">Septiembre 2023</p>
+                        <div class="certification-skills">
+                            <span class="skill-badge">Docker</span>
+                            <span class="skill-badge">Kubernetes</span>
+                            <span class="skill-badge">Spring Boot</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certification-card">
+                    <div class="certification-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="certification-content">
+                        <h3 class="certification-title">Scrum Foundation Professional Certificate</h3>
+                        <p class="certification-issuer">CertiProf</p>
+                        <p class="certification-date">Septiembre 2022</p>
+                        <div class="certification-skills">
+                            <span class="skill-badge">Scrum</span>
+                            <span class="skill-badge">Agile</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certification-card">
+                    <div class="certification-icon">
+                        <i class="fab fa-angular"></i>
+                    </div>
+                    <div class="certification-content">
+                        <h3 class="certification-title">Curso de Angular</h3>
+                        <p class="certification-issuer">Platzi</p>
+                        <p class="certification-date">Diciembre 2020</p>
+                        <div class="certification-skills">
+                            <span class="skill-badge">Angular</span>
+                            <span class="skill-badge">Frontend</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certification-card">
+                    <div class="certification-icon">
+                        <i class="fab fa-spring"></i>
+                    </div>
+                    <div class="certification-content">
+                        <h3 class="certification-title">Curso de Hibernate y Java Spring</h3>
+                        <p class="certification-issuer">Platzi</p>
+                        <p class="certification-date">Septiembre 2020</p>
+                        <div class="certification-skills">
+                            <span class="skill-badge">Hibernate</span>
+                            <span class="skill-badge">Spring</span>
+                            <span class="skill-badge">Java</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certification-card">
+                    <div class="certification-icon">
+                        <i class="fab fa-angular"></i>
+                    </div>
+                    <div class="certification-content">
+                        <h3 class="certification-title">Angular & Spring 5: Creando webapp full stack (Angular 8+)</h3>
+                        <p class="certification-issuer">Udemy</p>
+                        <p class="certification-date">Enero 2020</p>
+                        <div class="certification-skills">
+                            <span class="skill-badge">Angular</span>
+                            <span class="skill-badge">Spring</span>
+                            <span class="skill-badge">Full Stack</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certification-card">
+                    <div class="certification-icon">
+                        <i class="fab fa-spring"></i>
+                    </div>
+                    <div class="certification-content">
+                        <h3 class="certification-title">Spring Framework 5: Creando webapp desde cero a experto</h3>
+                        <p class="certification-issuer">Udemy</p>
+                        <p class="certification-date">Mayo 2019</p>
+                        <div class="certification-skills">
+                            <span class="skill-badge">Spring Framework</span>
+                            <span class="skill-badge">Java</span>
+                            <span class="skill-badge">Backend</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certification-card">
+                    <div class="certification-icon">
+                        <i class="fab fa-java"></i>
+                    </div>
+                    <div class="certification-content">
+                        <h3 class="certification-title">Proyecto Java Web JSP, Servlet con MySql desde Netbeans</h3>
+                        <p class="certification-issuer">Udemy</p>
+                        <p class="certification-date">Septiembre 2018</p>
+                        <div class="certification-skills">
+                            <span class="skill-badge">Java</span>
+                            <span class="skill-badge">JSP</span>
+                            <span class="skill-badge">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certification-card">
+                    <div class="certification-icon">
+                        <i class="fab fa-js"></i>
+                    </div>
+                    <div class="certification-content">
+                        <h3 class="certification-title">Javascript: de cero hasta los detalles</h3>
+                        <p class="certification-issuer">Udemy</p>
+                        <p class="certification-date">Septiembre 2018</p>
+                        <div class="certification-skills">
+                            <span class="skill-badge">JavaScript</span>
+                            <span class="skill-badge">Frontend</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certification-card">
+                    <div class="certification-icon">
+                        <i class="fab fa-php"></i>
+                    </div>
+                    <div class="certification-content">
+                        <h3 class="certification-title">Como crear un CRUD con PHP y Sql Server</h3>
+                        <p class="certification-issuer">Udemy</p>
+                        <p class="certification-date">Abril 2018</p>
+                        <div class="certification-skills">
+                            <span class="skill-badge">PHP</span>
+                            <span class="skill-badge">SQL Server</span>
+                            <span class="skill-badge">CRUD</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certification-card">
+                    <div class="certification-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="certification-content">
+                        <h3 class="certification-title">Comienza con SQL</h3>
+                        <p class="certification-issuer">Udemy</p>
+                        <p class="certification-date">Octubre 2018</p>
+                        <div class="certification-skills">
+                            <span class="skill-badge">SQL</span>
+                            <span class="skill-badge">Base de Datos</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certification-card">
+                    <div class="certification-icon">
+                        <i class="fab fa-js"></i>
+                    </div>
+                    <div class="certification-content">
+                        <h3 class="certification-title">TypeScript - El lenguaje de Angular 2</h3>
+                        <p class="certification-issuer">Udemy</p>
+                        <p class="certification-date">Enero 2017</p>
+                        <div class="certification-skills">
+                            <span class="skill-badge">TypeScript</span>
+                            <span class="skill-badge">Angular</span>
+                            <span class="skill-badge">Frontend</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Contacto</h2>
+            <div class="contact-content-centered">
+                <div class="contact-info">
+                    <h3>Conectemos</h3>
+                    <p>
+                        Si estás interesado en colaborar en proyectos, discutir oportunidades laborales 
+                        o simplemente conversar sobre tecnología, no dudes en contactarme a través de mis redes.
+                    </p>
+                    <div class="contact-methods">
+                        <a href="mailto:sebasdiaz67@gmail.com" class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <span>sebasdiaz67@gmail.com</span>
+                        </a>
+                        <a href="https://linkedin.com/in/sebasdiaz67" target="_blank" class="contact-method">
+                            <i class="fab fa-linkedin"></i>
+                            <span>linkedin.com/in/sebasdiaz67</span>
+                        </a>
+                        <a href="https://github.com/sebasdiaz67" target="_blank" class="contact-method">
+                            <i class="fab fa-github"></i>
+                            <span>github.com/sebasdiaz67</span>
+                        </a>
+                        <a href="https://x.com/sebasdiaz89" target="_blank" class="contact-method">
+                            <i class="fab fa-x-twitter"></i>
+                            <span>x.com/sebasdiaz89</span>
+                        </a>
+                        <a href="https://www.facebook.com/sebasdiaz67" target="_blank" class="contact-method">
+                            <i class="fab fa-facebook"></i>
+                            <span>facebook.com/sebasdiaz67</span>
+                        </a>
+                        <a href="https://www.instagram.com/sebastianroserodiaz/" target="_blank" class="contact-method">
+                            <i class="fab fa-instagram"></i>
+                            <span>instagram.com/sebastianroserodiaz</span>
+                        </a>
+                        <a href="tel:+593958764600" class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <span>+593 958 764 600</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2024 Byron Sebastián Rosero Díaz. Todos los derechos reservados.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://linkedin.com/in/sebasdiaz67" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/sebasdiaz67" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://x.com/sebasdiaz89" target="_blank" class="social-link">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+                    <a href="https://www.facebook.com/sebasdiaz67" target="_blank" class="social-link">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/sebastianroserodiaz/" target="_blank" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
-
 </html>
