@@ -267,7 +267,10 @@ function typeWriter() {
 
 // Initialize animations when page loads
 document.addEventListener('DOMContentLoaded', () => {
-    animateSkillBars();
+    // Trigger skill bars animation immediately
+    setTimeout(() => {
+        animateSkillBars();
+    }, 500);
     animateOnScroll();
     typeWriter();
 });
